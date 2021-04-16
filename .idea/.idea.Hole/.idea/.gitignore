@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/modules.xml
+/contentModel.xml
+/.idea.Hole.iml
+# Datasource local storage ignored files
+/../../../../../../../../../:\Users\pc\Desktop\Unity Projects\Hole\.idea\.idea.Hole\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
