@@ -10,7 +10,7 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IDragHandler
     public Transform player;
     private float speed = 0.05f;
     private float playerXBound = 4.5f;
-    private const float maxSpeed = 0.5f;
+    private const float maxSpeed = 0.15f;
 
     //just_for_fun
     private float playerYBound = 9f;
