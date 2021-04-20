@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Swipe : MonoBehaviour, IBeginDragHandler, IDragHandler
+public class Swipe : MonoBehaviour
 {
 
-    public Transform player;
+   /* public Transform player;
     private float speed = 0.05f;
     private float playerXBound = 4.5f;
     private const float maxSpeed = 0.15f;
@@ -40,5 +40,18 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IDragHandler
         if (player.position.y < -playerYBound){
             player.position = new Vector3(player.position.x, -playerYBound, player.position.z);
         }
+    }*/
+    public Transform player;
+    private float speed = 20f;
+    void OnMouseDrag () {
+        if (!Player.lose) {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+            mousePos.x = mousePos.x > 4.5f ? 4.5f : mousePos.x;
+            mousePos.x = mousePos.x < -4.5f ? -4.5f : mousePos.x;
+            mousePos.y = mousePos.y > 11f ? 11f : mousePos.y;
+            mousePos.y = mousePos.y < -11f ? -11f : mousePos.y;
+            player.position = Vector3.MoveTowards (player.position, new Vector3 (mousePos.x, mousePos.y, player.position.z), speed * Time.deltaTime);
+	
+        }	
     }
 }
